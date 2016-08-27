@@ -1,0 +1,29 @@
+<root>
+    <key>
+		<pkey condition="or">
+			<p name="输入6" switch="" />
+		</pkey>
+		<skey>
+			<s name="输入7" show="0" />
+		    <s name="输入8" show="0" />
+		</skey>
+	</key>
+	 <key>
+		<pkey condition="or">
+			<p name="输入6" switch="证件地址" />
+		</pkey>
+		<skey>
+			<s name="输入7" show="1" />
+		    <s name="输入8" show="0" />
+		</skey>
+	</key>
+	 <key>
+		<pkey condition="or">
+			<p name="输入6" switch="其它" />
+		</pkey>
+		<skey>
+			<s name="输入7" show="0" />
+		    <s name="输入8" show="1" />
+		</skey>
+	</key>
+</root>
