@@ -1,0 +1,13 @@
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\XinJiangFBMSet.exe
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\XinJiangFBMSet.pdb
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.dll
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\WinAPI.dll
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.pdb
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.Form1.resources
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.Properties.Resources.resources
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.csproj.GenerateResource.Cache
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.exe
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.pdb
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.xml

@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_netsub = new System.Windows.Forms.TextBox();
             this.tb_gateway = new System.Windows.Forms.TextBox();
+            this.bt_viewAdapterEnable = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -179,6 +180,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.bt_viewAdapterEnable);
             this.groupBox2.Controls.Add(this.tb_gateway);
             this.groupBox2.Controls.Add(this.tb_netsub);
             this.groupBox2.Controls.Add(this.label8);
@@ -187,7 +189,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(258, 105);
+            this.groupBox2.Size = new System.Drawing.Size(351, 105);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "IP地址属性";
@@ -226,11 +228,21 @@
             this.tb_gateway.TabIndex = 5;
             this.tb_gateway.Text = "10.16.?.254";
             // 
+            // bt_viewAdapterEnable
+            // 
+            this.bt_viewAdapterEnable.Location = new System.Drawing.Point(246, 18);
+            this.bt_viewAdapterEnable.Name = "bt_viewAdapterEnable";
+            this.bt_viewAdapterEnable.Size = new System.Drawing.Size(99, 44);
+            this.bt_viewAdapterEnable.TabIndex = 6;
+            this.bt_viewAdapterEnable.Text = "网络通不通";
+            this.bt_viewAdapterEnable.UseVisualStyleBackColor = true;
+            this.bt_viewAdapterEnable.Click += new System.EventHandler(this.bt_viewAdapterEnable_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 353);
+            this.ClientSize = new System.Drawing.Size(375, 353);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -266,6 +278,7 @@
         private System.Windows.Forms.TextBox tb_netsub;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bt_viewAdapterEnable;
     }
 }
 

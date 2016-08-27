@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FileTool</name>
+    </assembly>
+    <members>
+        <member name="T:FileTool.FileControl">
+            <summary>
+            对文件操作的类   包括快捷键
+            </summary>
+        </member>
+        <member name="F:FileTool.FileControl.win7startupPath">
+            <summary>
+            win7开机启动位置
+            </summary>
+        </member>
+        <member name="M:FileTool.FileControl.CopyDirectory(System.String,System.String,System.String)">
+            <summary>
+            拷贝文件夹下面的全部东西到另外一个里面
+            </summary>
+            <param name="srcdir">源文件夹</param>
+            <param name="desdir">目标文件夹</param>
+            <param name="exceptdir">排除的文件夹名称</param>
+        </member>
+        <member name="M:FileTool.FileControl.FindDirPath(System.String,System.String[])">
+            <summary>
+            在dirpath文件夹里面 查找包含
+            </summary>
+            <param name="dirPath">要查找的位置</param>
+            <param name="ContainFiles">包含的文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:FileTool.FileControl.IsDirPathByLnkFullName(System.String,System.String,System.String@)">
+            <summary>
+            快捷键文件是否指向   特定的文件 并给出指向文件夹位置
+            </summary>
+            <param name="fileFullPath">快捷键全路径</param>
+            <param name="isContainFile">特定的文件名</param>
+            <param name="DirPath">给出指向的文件夹</param>
+            <returns>是否指向 特定的文件</returns>
+        </member>
+        <member name="T:FileTool.IniFileControl">
+            <summary>
+            操作ini文件类
+            </summary>
+        </member>
+        <member name="M:FileTool.IniFileControl.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="filePath">需要输入文件绝对位置</param>
+        </member>
+        <member name="M:FileTool.IniFileControl.ReadIniField(System.String,System.String)">
+            <summary>
+            读取ini键值
+            </summary>
+            <param name="valOne">键主标题</param>
+            <param name="valTwo">键名称</param>
+            <returns>键值</returns>
+        </member>
+        <member name="M:FileTool.IniFileControl.WriteIniField(System.String,System.String,System.String)">
+            <summary>
+            写入ini文件
+            </summary>
+            <param name="valOne">appName</param>
+            <param name="valTwo">键名称</param>
+            <param name="value">键值</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="F:FileTool.Form1.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:FileTool.Form1.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:FileTool.Form1.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:ToolHelper.IPClass">
+            <summary>
+            对IP地址和适配器进行修改的类
+            </summary>
+        </member>
+        <member name="M:ToolHelper.IPClass.ModifyIPAddress(System.String,System.String,System.String,System.String)">
+            <summary>
+            指定适配器名称   修改IP地址
+            </summary>
+            <param name="name">适配器名称</param>
+            <param name="ip">ip地址</param>
+            <param name="netsub">子网掩码</param>
+            <param name="gateway">网关</param>
+            <returns>返回 是否修改成功</returns>
+        </member>
+        <member name="M:ToolHelper.IPClass.EnableOrDisableAdapter(System.String,System.Boolean)">
+            <summary>
+            开启或者禁止指定的 网络适配器
+            </summary>
+            <param name="name">网络适配器名称</param>
+            <param name="isEnable">是否允许开启</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="M:ToolHelper.IPClass.IsEnableAdapter(System.String)">
+            <summary>
+            网络是否可用  包括适配器被禁用 和网络没有连接
+            </summary>
+            <param name="name">适配器名称</param>
+            <returns>返回网络是否可用</returns>
+        </member>
+        <member name="M:ToolHelper.IPClass.Dispose">
+            <summary>
+            释放wmi资源
+            </summary>
+        </member>
+        <member name="M:FileTool.Program.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+        <member name="T:ToolHelper.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:ToolHelper.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:ToolHelper.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

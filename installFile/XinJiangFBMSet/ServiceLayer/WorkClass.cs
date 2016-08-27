@@ -99,5 +99,86 @@ namespace XinJiangFBMSet.ServiceLayer
             shihuoxian = ifc_fill.ReadIniField("填单机参数", "市或县");
             yinhangmingcheng = ifc_fill.ReadIniField("填单机参数", "银行名称");
         }
+        /// <summary>
+        /// 查看网络 是否通
+        /// </summary>
+        /// <returns></returns>
+        public bool ShowNetStatus()
+        {
+            bool result = false;
+            using (ToolHelper.IPClass ipc = new ToolHelper.IPClass())
+            {
+                result = ipc.IsEnableAdapter("本地连接");
+            }
+            return result;
+        }
+        /// <summary>
+        /// 开启本地连接  网络适配器
+        /// </summary>
+        /// <returns></returns>
+        public bool OpenAdapter()
+        {
+            bool result = false;
+            using (ToolHelper.IPClass ipc=new ToolHelper.IPClass())
+            {
+                result = ipc.EnableOrDisableAdapter("本地连接", true);
+            }
+            return result;
+        }
+        /// <summary>
+        /// 设置IP地址
+        /// </summary>
+        /// <param name="ip"></param>
+        /// <param name="netsub"></param>
+        /// <param name="gateway"></param>
+        /// <returns></returns>
+        public bool SetIP(string ip, string netsub, string gateway)
+        {
+
+            if (ip.Contains("?")||gateway.Contains("?"))
+            {
+                return false;
+            }
+            if (!this.validateIPAddress(ip)||!this.validateIPAddress(netsub)||!this.validateIPAddress(gateway))
+            {
+                return false;
+            }
+            bool result = false;
+            using (ToolHelper.IPClass ipc=new ToolHelper.IPClass())
+            {
+                result = ipc.ModifyIPAddress("本地连接", ip, netsub, gateway);
+            }
+            return result;
+        }
+        /// <summary>
+        /// 验证ip地址 是否有效
+        /// </summary>
+        /// <param name="ip"></param>
+        /// <returns></returns>
+        private bool validateIPAddress(string ip)
+        {
+            string[] ips = ip.Split('.');
+            if (ips.Length!=4)
+            {
+                return false;
+            }
+            for (int i = 0; i < ips.Length; i++)
+            {
+                try
+                {
+                    int ips_v = Convert.ToInt32(ips[i]);
+                    if (ips_v >= 0 && ips_v < 256)
+                    {
+                        ;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch { return false; }
+            }
+            return true;
+        }
     }
 }

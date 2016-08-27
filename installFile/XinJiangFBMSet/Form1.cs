@@ -22,7 +22,42 @@ namespace XinJiangFBMSet
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            //开启网络适配器
+            WorkClass wc = new WorkClass();
 
+            if (wc.OpenAdapter())
+            { MessageBox.Show("开启  本地连接 成功"); }
+            else
+            {
+                MessageBox.Show("开启本地连接 失败");
+            }
+            //复制文件
+            if (wc.CopyFile())
+            {
+                MessageBox.Show("复制文件成功");
+            }
+            else
+            {
+                MessageBox.Show("复制文件  失败");
+            }
+            //设置ini文件
+            if (wc.SetIniFile(this.tb_morendiqu.Text.Trim(), this.tb_morenshi.Text.Trim(), this.tb_morenxian.Text.Trim(), this.tb_shihuoxian.Text.Trim(), this.tb_yinhangmingcheng.Text.Trim()))
+            {
+                MessageBox.Show("设置ini文件成功");
+            }
+            else
+            {
+                MessageBox.Show("设置ini文件失败");
+            }
+            //设置ip地址
+            if (wc.SetIP(this.tb_ip.Text.Trim(), this.tb_netsub.Text.Trim(), this.tb_gateway.Text.Trim()))
+            {
+                MessageBox.Show("设置ip地址成功");
+            }
+            else
+            {
+                MessageBox.Show("设置ip地址失败");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,6 +76,13 @@ namespace XinJiangFBMSet
             this.tb_shihuoxian.Text = shihuoxian;
             this.tb_yinhangmingcheng.Text = yinhangmingcheng;
 
+        }
+
+        private void bt_viewAdapterEnable_Click(object sender, EventArgs e)
+        {
+            WorkClass wc = new WorkClass();
+            if (wc.ShowNetStatus()) { MessageBox.Show("网络正常"); }
+            else { MessageBox.Show("网络不通"); }
         }
     }
 }
