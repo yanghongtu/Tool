@@ -28,3 +28,7 @@ D:\20160823\installFile\installFile\installFile\obj\Debug\Interop.IWshRuntimeLib
 D:\20160823\installFile\installFile\installFile\obj\Debug\installFile.csproj.ResolveComReference.cache
 D:\20160823\installFile\installFile\installFile\obj\Debug\installFile.exe
 D:\20160823\installFile\installFile\installFile\obj\Debug\installFile.pdb
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.csproj.ResolveComReference.cache
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.exe
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.pdb
