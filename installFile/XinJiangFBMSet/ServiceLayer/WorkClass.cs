@@ -46,7 +46,7 @@ namespace XinJiangFBMSet.ServiceLayer
         /// <param name="shihuoxian">市或县</param>
         /// <param name="yinhangmingcheng">银行名称</param>
         /// <returns>是否执行成功</returns>
-        public bool SetIniFile(string morendiqu,string morenshi,string morenxian,string shihuoxian,string yinhangmingcheng)
+        public bool SetIniFile(string morendiqu,string morenshi,string morenxian,string shihuoxian,string yinhangmingcheng,string ip)
         {
             bool result = false;
             FileTool.FileControl fc = new FileTool.FileControl();
@@ -65,6 +65,11 @@ namespace XinJiangFBMSet.ServiceLayer
             if(!ifc_fill.WriteIniField("填单机参数", "默认县",morenxian))return false;
             if(!ifc_fill.WriteIniField("填单机参数", "市或县", shihuoxian))return false;
             if(!ifc_fill.WriteIniField("填单机参数", "银行名称", yinhangmingcheng))return false;
+            if (!ifc_fill.WriteIniField("填单机参数", "无接口连接地址", ip)) return false;
+
+            string servicesetpath = ht["DataService.exe"].ToString() + "\\set.ini";
+            FileTool.IniFileControl ifc_service = new FileTool.IniFileControl(servicesetpath);
+            if (!ifc_service.WriteIniField("系统设置", "数据地址", ip)) return false;
 
 
             string kaihu = ht["FillBillSystem.exe"].ToString() + "\\config\\1-开户\\本人业务模块.txt";

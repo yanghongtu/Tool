@@ -22,6 +22,8 @@ namespace XinJiangFBMSet
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            Button bu = sender as Button;
+            bu.Enabled = false;
             //开启网络适配器
             WorkClass wc = new WorkClass();
 
@@ -41,7 +43,7 @@ namespace XinJiangFBMSet
                 MessageBox.Show("复制文件  失败");
             }
             //设置ini文件
-            if (wc.SetIniFile(this.tb_morendiqu.Text.Trim(), this.tb_morenshi.Text.Trim(), this.tb_morenxian.Text.Trim(), this.tb_shihuoxian.Text.Trim(), this.tb_yinhangmingcheng.Text.Trim()))
+            if (wc.SetIniFile(this.tb_morendiqu.Text.Trim(), this.tb_morenshi.Text.Trim(), this.tb_morenxian.Text.Trim(), this.tb_shihuoxian.Text.Trim(), this.tb_yinhangmingcheng.Text.Trim(),this.tb_ip.Text.Trim()))
             {
                 MessageBox.Show("设置ini文件成功");
             }
@@ -58,6 +60,7 @@ namespace XinJiangFBMSet
             {
                 MessageBox.Show("设置ip地址失败");
             }
+            bu.Enabled = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)

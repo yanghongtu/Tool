@@ -32,3 +32,11 @@ D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\Interop.IWshRuntimeLi
 D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.csproj.ResolveComReference.cache
 D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.exe
 D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.pdb
+D:\Documents\GitHub\Tool\installFile\installFile\bin\Debug\installFile.exe
+D:\Documents\GitHub\Tool\installFile\installFile\bin\Debug\installFile.pdb
+D:\Documents\GitHub\Tool\installFile\installFile\bin\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.Form1.resources
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.Form2.resources
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.Properties.Resources.resources
+D:\Documents\GitHub\Tool\installFile\installFile\obj\Debug\installFile.csproj.GenerateResource.Cache
