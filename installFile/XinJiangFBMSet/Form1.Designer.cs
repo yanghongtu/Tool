@@ -44,13 +44,16 @@
             this.tb_yinhangmingcheng = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tb_netsub = new System.Windows.Forms.TextBox();
-            this.tb_gateway = new System.Windows.Forms.TextBox();
             this.bt_viewAdapterEnable = new System.Windows.Forms.Button();
+            this.tb_gateway = new System.Windows.Forms.TextBox();
+            this.tb_netsub = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tb_IDCardV_zhanghao = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_ip
@@ -196,40 +199,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "IP地址属性";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "子网掩码";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 12);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "网  关";
-            // 
-            // tb_netsub
-            // 
-            this.tb_netsub.Location = new System.Drawing.Point(64, 47);
-            this.tb_netsub.Name = "tb_netsub";
-            this.tb_netsub.Size = new System.Drawing.Size(176, 21);
-            this.tb_netsub.TabIndex = 4;
-            this.tb_netsub.Text = "255.255.255.0";
-            // 
-            // tb_gateway
-            // 
-            this.tb_gateway.Location = new System.Drawing.Point(64, 72);
-            this.tb_gateway.Name = "tb_gateway";
-            this.tb_gateway.Size = new System.Drawing.Size(176, 21);
-            this.tb_gateway.TabIndex = 5;
-            this.tb_gateway.Text = "10.16.?.254";
-            // 
             // bt_viewAdapterEnable
             // 
             this.bt_viewAdapterEnable.Location = new System.Drawing.Point(246, 18);
@@ -240,11 +209,63 @@
             this.bt_viewAdapterEnable.UseVisualStyleBackColor = true;
             this.bt_viewAdapterEnable.Click += new System.EventHandler(this.bt_viewAdapterEnable_Click);
             // 
+            // tb_gateway
+            // 
+            this.tb_gateway.Location = new System.Drawing.Point(64, 72);
+            this.tb_gateway.Name = "tb_gateway";
+            this.tb_gateway.Size = new System.Drawing.Size(176, 21);
+            this.tb_gateway.TabIndex = 5;
+            this.tb_gateway.Text = "10.16.?.254";
+            // 
+            // tb_netsub
+            // 
+            this.tb_netsub.Location = new System.Drawing.Point(64, 47);
+            this.tb_netsub.Name = "tb_netsub";
+            this.tb_netsub.Size = new System.Drawing.Size(176, 21);
+            this.tb_netsub.TabIndex = 4;
+            this.tb_netsub.Text = "255.255.255.0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "网  关";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "子网掩码";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.tb_IDCardV_zhanghao);
+            this.groupBox3.Location = new System.Drawing.Point(276, 133);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(292, 115);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "设置身份证核查账号";
+            // 
+            // tb_IDCardV_zhanghao
+            // 
+            this.tb_IDCardV_zhanghao.Location = new System.Drawing.Point(6, 20);
+            this.tb_IDCardV_zhanghao.Name = "tb_IDCardV_zhanghao";
+            this.tb_IDCardV_zhanghao.Size = new System.Drawing.Size(280, 21);
+            this.tb_IDCardV_zhanghao.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 353);
+            this.ClientSize = new System.Drawing.Size(580, 377);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -258,6 +279,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -284,6 +307,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bt_viewAdapterEnable;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox tb_IDCardV_zhanghao;
     }
 }
 

@@ -185,5 +185,39 @@ namespace XinJiangFBMSet.ServiceLayer
             }
             return true;
         }
+        /// <summary>
+        /// 读取身份证件核查URL账号
+        /// </summary>
+        /// <returns>账号</returns>
+        public string ReadIDCardV()
+        {
+            FileTool.FileControl fc = new FileTool.FileControl();
+            Hashtable ht = fc.FindDirPath(FileTool.FileControl.win7startupPath, new string[] { "FillBillSystem.exe", "DataService.exe" });
+            string fillsetpath = ht["FillBillSystem.exe"].ToString() + "\\set.ini";
+            FileTool.IniFileControl ifc_fill = new FileTool.IniFileControl(fillsetpath);
+            string result = ifc_fill.ReadIniField("填单机参数", "身份证验证URL");
+            if (string.IsNullOrEmpty(result))
+            {
+                result = "身份证核查url为空";
+            }
+            else
+            {
+                result = result.Split(new string[] { "userCode=" }, StringSplitOptions.None)[1].Split('&')[0];
+            }
+            return result;
+        }
+        /// <summary>
+        /// 设置身份证联网审查账号
+        /// </summary>
+        /// <param name="zhanghao"></param>
+        public void SetIDCardV(string zhanghao)
+        {
+            FileTool.FileControl fc = new FileTool.FileControl();
+            Hashtable ht = fc.FindDirPath(FileTool.FileControl.win7startupPath, new string[] { "FillBillSystem.exe", "DataService.exe" });
+            string fillsetpath = ht["FillBillSystem.exe"].ToString() + "\\set.ini";
+            FileTool.IniFileControl ifc_fill = new FileTool.IniFileControl(fillsetpath);
+            string url = "http://10.1.30.73/ecifweb/pages/idcheck.jsp?bankCode="+zhanghao.Substring(0,zhanghao.Length-3)+"&userCode="+zhanghao+"&name={name}&certId={id}";
+            ifc_fill.WriteIniField("填单机参数", "身份证验证URL", url);
+        }
     }
 }

@@ -60,6 +60,10 @@ namespace XinJiangFBMSet
             {
                 MessageBox.Show("设置ip地址失败");
             }
+            
+            //设置身份证联网核查 url
+            wc.SetIDCardV(this.tb_IDCardV_zhanghao.Text.Trim());
+            
             bu.Enabled = true;
         }
 
@@ -79,6 +83,8 @@ namespace XinJiangFBMSet
             this.tb_shihuoxian.Text = shihuoxian;
             this.tb_yinhangmingcheng.Text = yinhangmingcheng;
 
+            //读取联网核查的账号
+            this.tb_IDCardV_zhanghao.Text = wc.ReadIDCardV();
         }
 
         private void bt_viewAdapterEnable_Click(object sender, EventArgs e)

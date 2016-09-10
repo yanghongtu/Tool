@@ -1,6 +1,5 @@
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\XinJiangFBMSet.exe
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\XinJiangFBMSet.pdb
-D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.dll
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\Interop.IWshRuntimeLibrary.dll
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\WinAPI.dll
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.pdb
@@ -11,3 +10,4 @@ D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.csp
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.exe
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.pdb
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.xml
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.dll

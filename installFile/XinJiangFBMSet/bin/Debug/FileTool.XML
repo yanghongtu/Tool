@@ -119,6 +119,18 @@
             释放wmi资源
             </summary>
         </member>
+        <member name="T:ToolHelper.NetClass">
+            <summary>
+            网络类
+            </summary>
+        </member>
+        <member name="M:ToolHelper.NetClass.SendArp(System.String)">
+            <summary>
+            对应地址获取mac地址
+            </summary>
+            <param name="ip">字符串形式的ip地址</param>
+            <returns>返回mac地址 或者 空字符串</returns>
+        </member>
         <member name="M:FileTool.Program.Main">
             <summary>
             应用程序的主入口点。
