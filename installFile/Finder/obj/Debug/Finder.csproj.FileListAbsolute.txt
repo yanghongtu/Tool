@@ -1,0 +1,4 @@
+D:\Documents\GitHub\Tool\installFile\Finder\obj\Debug\Finder.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\Tool\installFile\Finder\obj\Debug\Finder.Form1.resources
+D:\Documents\GitHub\Tool\installFile\Finder\obj\Debug\Finder.Properties.Resources.resources
+D:\Documents\GitHub\Tool\installFile\Finder\obj\Debug\Finder.csproj.GenerateResource.Cache

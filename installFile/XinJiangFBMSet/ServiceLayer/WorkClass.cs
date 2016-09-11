@@ -57,7 +57,7 @@ namespace XinJiangFBMSet.ServiceLayer
                 MessageBox.Show("没有获取到文件夹位置");
                 return false;
             }
-            string fillsetpath=ht["FillBillSystem.exe"].ToString()+"\\set.ini";
+            string fillsetpath=ht["FillBillSystem.exe"].ToString()+"set.ini";
             FileTool.IniFileControl ifc_fill = new FileTool.IniFileControl(fillsetpath);
             if(!ifc_fill.WriteIniField("填单机参数", "是否屏蔽ctrlaltdel", "否"))return false;
             if(!ifc_fill.WriteIniField("填单机参数", "默认地区", morendiqu))return false;
@@ -67,19 +67,38 @@ namespace XinJiangFBMSet.ServiceLayer
             if(!ifc_fill.WriteIniField("填单机参数", "银行名称", yinhangmingcheng))return false;
             if (!ifc_fill.WriteIniField("填单机参数", "无接口连接地址", ip)) return false;
 
-            string servicesetpath = ht["DataService.exe"].ToString() + "\\set.ini";
+            string servicesetpath = ht["DataService.exe"].ToString() + "set.ini";
             FileTool.IniFileControl ifc_service = new FileTool.IniFileControl(servicesetpath);
             if (!ifc_service.WriteIniField("系统设置", "数据地址", ip)) return false;
 
 
-            string kaihu = ht["FillBillSystem.exe"].ToString() + "\\config\\1-开户\\本人业务模块.txt";
+            string kaihu = ht["FillBillSystem.exe"].ToString() + "config\\1-开户\\本人业务模块.txt";
             FileTool.IniFileControl ifc_kaihu = new FileTool.IniFileControl(kaihu);
             if(!ifc_kaihu.WriteIniField("业务", "输入14必填","是"))return false;
 
 
-            string wukazhe = ht["FillBillSystem.exe"].ToString() + "\\config\\5-无卡折\\配置文件.txt";
+            string wukazhe = ht["FillBillSystem.exe"].ToString() + "config\\5-无卡折\\配置文件.txt";
             FileTool.IniFileControl ifc_wukazhe = new FileTool.IniFileControl(wukazhe);
             if(!ifc_wukazhe.WriteIniField("业务", "是否打印填单号","否"))return false;
+
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(ht["FillBillSystem.exe"].ToString() + "\\config");
+            System.IO.DirectoryInfo[] dis = di.GetDirectories();
+
+            string cundanDirName="";
+            foreach (System.IO.DirectoryInfo item in dis)
+            {
+                if (item.Name.Contains("存单开户"))
+                {
+                    cundanDirName = item.Name;
+                }
+            }
+            if (cundanDirName=="")
+            {
+                return false;
+            }
+            string cundan = ht["FillBillSystem.exe"].ToString() + "config\\" + cundanDirName + "\\本人业务模块.txt";
+            FileTool.IniFileControl ifc_cundan = new FileTool.IniFileControl(cundan);
+            if (!ifc_cundan.WriteIniField("业务", "输入5值规则", "[0-9]{17}[X|0-9]")) return false;
 
             result = true;
             return result;

@@ -11,3 +11,5 @@ D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.exe
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\obj\Debug\XinJiangFBMSet.pdb
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.xml
 D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\FileTool.dll
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\WinAPI.pdb
+D:\Documents\GitHub\Tool\installFile\XinJiangFBMSet\bin\Debug\WinAPI.xml
